@@ -1,0 +1,12 @@
+<div class="container-note">
+    <div class="note">
+        <div class="info-note">
+            <h1 class="text-note">{{note.title}}</h1>
+            <p class="description-note">{{note.description}}</p>
+        </div>
+        <div class="actions">
+            <button class="update-button" (click)="updateNote(note.ID!)">{{update}}</button>
+            <button class="remove-button" (click)="removeNote(note.ID!)">{{remove}}</button>
+        </div>
+    </div>
+</div>

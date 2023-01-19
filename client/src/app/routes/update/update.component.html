@@ -1,0 +1,16 @@
+<div class="container-create">
+    <div class="container-error">
+        <p class="error-text">{{errorText}}</p>
+    </div>
+    <form (ngSumbit)="updateANote()" class="container-form">
+        <div class="separator">
+            <input type="text" name="title" [(ngModel)]="noteData.title" class="input-form" placeholder="Title" value="noteData.title">
+        </div>
+        <div class="separator">
+            <textarea name="description" [(ngModel)]="noteData.description" class="textarea-form" placeholder="Description" value="noteData.description"></textarea>
+        </div>
+        <div class="separator">
+            <button (click)="updateANote()" class="button-form">{{textButton}}</button>
+        </div>
+    </form>
+</div>

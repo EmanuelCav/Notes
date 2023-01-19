@@ -1,0 +1,8 @@
+<div class="container-notes">
+    <div *ngFor="let note of allNotes" class="contain-note">
+        <div class="note" (click)="getNote(note.ID!)">
+            <h1 class="text-note">{{note.title}}</h1>
+            <p class="description-note">{{note.description}}</p>
+        </div>
+    </div>
+</div>

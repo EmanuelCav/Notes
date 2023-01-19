@@ -1,0 +1,25 @@
+.container-nav {
+    height: 64px;
+    background: brown;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0 12px;
+}
+.text-nav {
+    margin: 0 24px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    text-decoration: none;
+}
+.text-nav:hover {
+    text-decoration: underline !important;
+}
+.text-nav:active {
+    text-decoration: none !important;
+}
