@@ -75,6 +75,12 @@ func RemoveNote(w http.ResponseWriter, r *http.Request) {
 func UpdateNote(w http.ResponseWriter, r *http.Request) {
 	var note models.Note
 	params := mux.Vars(r)
+	
+	if note.Title == "" || note.Description == "" {
+		w.WriteHeader(http.StatusBadRequest)
+		w.Write([]byte("There are empty fields. Please complete"))
+		return
+	}
 
 	database.Db.First(&note, params["id"])
 
@@ -87,12 +93,6 @@ func UpdateNote(w http.ResponseWriter, r *http.Request) {
 	}
 
 	json.NewDecoder(r.Body).Decode(&note)
-
-	if note.Title == "" || note.Description == "" {
-		w.WriteHeader(http.StatusBadRequest)
-		w.Write([]byte("There are empty fields. Please complete"))
-		return
-	}
 
 	noteSaved := database.Db.Updates(&note)
 
