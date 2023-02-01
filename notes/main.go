@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/EmanuelCav/projects/database"
-	"github.com/EmanuelCav/projects/models"
-	"github.com/EmanuelCav/projects/routes"
+	"github.com/EmanuelCav/notes/database"
+	"github.com/EmanuelCav/notes/models"
+	"github.com/EmanuelCav/notes/routes"
 	"github.com/joho/godotenv"
 
 	"github.com/gorilla/handlers"

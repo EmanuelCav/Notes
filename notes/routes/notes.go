@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/EmanuelCav/projects/database"
-	"github.com/EmanuelCav/projects/models"
+	"github.com/EmanuelCav/notes/database"
+	"github.com/EmanuelCav/notes/models"
 	"github.com/gorilla/mux"
 )
 
@@ -75,7 +75,7 @@ func RemoveNote(w http.ResponseWriter, r *http.Request) {
 func UpdateNote(w http.ResponseWriter, r *http.Request) {
 	var note models.Note
 	params := mux.Vars(r)
-	
+
 	if note.Title == "" || note.Description == "" {
 		w.WriteHeader(http.StatusBadRequest)
 		w.Write([]byte("There are empty fields. Please complete"))
